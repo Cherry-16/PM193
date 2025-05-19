@@ -19,7 +19,13 @@
 // console.log(); 
 //muestra en consola en probando con 3 números diferentes 
 
-const cuadrado = (numero) => numero * numero; 
-console.log(cuadrado(3)); 
-console.log(cuadrado(5));
-console.log(cuadrado(2)); 
+// const cuadrado = (numero) => numero * numero; 
+// console.log(cuadrado(3)); 
+// console.log(cuadrado(5));
+// console.log(cuadrado(2));  
+
+//c. Crea un arrow function llamada saludoPersonalizado que reciba dos parámetros: nombre y edad, 
+// y retorne una cadena como la siguiente: "Hola, me llamo Vanessa y tengo 20 años". 
+
+const saludoPersonalizado = (nombre, edad) => `Hola, me llamo ${nombre} y tengo ${edad} años`;
+console.log(saludoPersonalizado("Vanessa", 20));
