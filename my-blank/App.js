@@ -1,52 +1,42 @@
 /* Zona 1: Lugar de las importaciones */ 
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, Alert, ScrollView, TouchableOpacity, TouchableHighlight, TouchableNativeFeedback, Pressable, Switch } from 'react-native';
 import react, {useState} from 'react';
-
-//componente
-const Texto=({style})=>{
-  const [contenido,setContenido]=useState('Hola Mundo')
-  const actualizatexto=()=>{
-    setContenido('Estado Modificado')
-  };
-  return(
-    <Text style={[styles.text,style]} onPress={actualizatexto}>{contenido}</Text>
-  )
-} 
- /*const Boton=()=>{
-  const [texto,setTexto]=useState('Presionar')
-  const cambiarTexto=()=>{
-    setTexto('Boton Presionado')
-  };
-  return(
-    <Button title={texto} onPress={cambiarTexto}></Button>
-  )}  */
-/* Zona 2: Main */ 
+import {Button as ButtonPaper, Provider as ProveedorPaper} from 'react-native-paper'; 
+import {Button as ButtonElements} from 'react-native-elements';
+/*Zona 2: Main */
 export default function App() {
+  const [modoOscuro, setModoOscuro] = useState(false);
+  const alternarModoOscuro = () => setModoOscuro(previo=>!previo); 
   return (
-    <View style={styles.container}>
-      <Texto style={styles.azul}>Hola</Texto>
-      <Texto style={styles.verde}>Mundo</Texto>
-      <Texto style={styles.negro}>React Native</Texto>
-      {/*<Boton></Boton>*/}
-      <StatusBar style="auto" />
-    </View>
+    <ProveedorPaper>
+      <ScrollView contentContainerStyle={styles.ScrollContainer}>
+        <View style={[styles.container, {backgroundColor:modoOscuro ? '#111':'#fff'}]}></View>
+        <View style={styles.container}>
+          <Text styles={styles.title}>Modo de pantalla: {modoOscuro ? 'oscuro': 'claro'}</Text>
+          <Switch value={modoOscuro} onValueChange={alternarModoOscuro} />
+        </View>
+      </ScrollView>
+    </ProveedorPaper>
   );
 }
 /* Zona 3: Estilos */ 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'strech',
-    justifyContent: 'center',
-  },
-  text:{ 
-    color: 'white',
-    fontsize: 27, 
+    alignItems: 'center',
+    paddingHorizontal: 16, 
+    paddingBottom: 50,
   }, 
-  azul:{ backgroundColor:'blue'},
-  verde:{backgroundColor:'green'},
-  negro:{backgroundColor:'black'}
-
+  title: {
+    fontSize: 16, 
+    marginVertical: 6, 
+    textAlign: 'center',
+    color: '#000',
+  },
+  section: {
+    marginVertical: 15,
+    alignItems: 'center',
+    width: '100%',
+  }
 });
