@@ -1,6 +1,5 @@
-// src/screens/SplashScreen.js
-import React from 'react';
 import { View, Text, ImageBackground, StyleSheet } from 'react-native';
+import React from 'react';
 
 const SplashScreen = () => {
   return (
