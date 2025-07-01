@@ -1,64 +1,79 @@
-import {
-  ScrollView, // Para hacer el contenido desplazable
-  StatusBar, // Para acceder a la altura de la barra de estado
-  StyleSheet, // Para crear estilos
-  Text
+import{
+  ScrollView, //hacer el deslizable
+  StatusBar, //barra de estado
+  StyleSheet, //estilos
+  Text, //texto
 } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
-const App = () => (
+const App = () => {
+ return (
   <SafeAreaProvider>
     <SafeAreaView style={styles.container} edges={['top']}>
-      <ScrollView style={styles.scrollView}>
-        <Text style={styles.text}>
-          Este es el texto que ocupara todo el espacio 
-          para que podamos ver el espacio que ocupe el scrollView.
-          Este es el texto que ocupara todo el espacio 
-          para que podamos ver el espacio que ocupe el scrollView.
-          Este es el texto que ocupara todo el espacio 
-          para que podamos ver el espacio que ocupe el scrollView.
-          Este es el texto que ocupara todo el espacio 
-          para que podamos ver el espacio que ocupe el scrollView.
-          Este es el texto que ocupara todo el espacio 
-          para que podamos ver el espacio que ocupe el scrollView.
-          Este es el texto que ocupara todo el espacio 
-          para que podamos ver el espacio que ocupe el scrollView.
-          Este es el texto que ocupara todo el espacio 
-          para que podamos ver el espacio que ocupe el scrollView.
-          Este es el texto que ocupara todo el espacio 
-          para que podamos ver el espacio que ocupe el scrollView.
-          Este es el texto que ocupara todo el espacio 
-          para que podamos ver el espacio que ocupe el scrollView.
-          Este es el texto que ocupara todo el espacio 
-          para que podamos ver el espacio que ocupe el scrollView.
-                    Este es el texto que ocupara todo el espacio 
-          para que podamos ver el espacio que ocupe el scrollView.
-          Este es el texto que ocupara todo el espacio 
-          para que podamos ver el espacio que ocupe el scrollView.
-          Este es el texto que ocupara todo el espacio 
-          para que podamos ver el espacio que ocupe el scrollView.
-          Este es el texto que ocupara todo el espacio 
-          para que podamos ver el espacio que ocupe el scrollView.
-          Este es el texto que ocupara todo el espacio 
-          para que podamos ver el espacio que ocupe el scrollView.
-        </Text>
+      <ScrollView style={styles.scrollView} horizontal={true}>
+        <ScrollView>
+          <Text style={styles.text}>
+            Este es un ejemplo de una aplicación React Native con SafeAreaView y ScrollView.
+            Puedes agregar más contenido aquí para ver cómo funciona el desplazamiento.
+            Asegúrate de que el contenido sea lo suficientemente largo para activar el desplazamiento.
+            Puedes personalizar los estilos según tus necesidades.     
+            ste es un ejemplo de una aplicación React Native con SafeAreaView y ScrollView.
+            Puedes agregar más contenido aquí para ver cómo funciona el desplazamiento.
+            Asegúrate de que el contenido sea lo suficientemente largo para activar el desplazamiento.
+            Puedes personalizar los estilos según tus necesidades. 
+            ste es un ejemplo de una aplicación React Native con SafeAreaView y ScrollView.
+            Puedes agregar más contenido aquí para ver cómo funciona el desplazamiento.
+            Asegúrate de que el contenido sea lo suficientemente largo para activar el desplazamiento.
+            Puedes personalizar los estilos según tus necesidades. 
+            ste es un ejemplo de una aplicación React Native con SafeAreaView y ScrollView.
+            Puedes agregar más contenido aquí para ver cómo funciona el desplazamiento.
+            Asegúrate de que el contenido sea lo suficientemente largo para activar el desplazamiento.
+            Puedes personalizar los estilos según tus necesidades. 
+            ste es un ejemplo de una aplicación React Native con SafeAreaView y ScrollView.
+            Puedes agregar más contenido aquí para ver cómo funciona el desplazamiento.
+            Asegúrate de que el contenido sea lo suficientemente largo para activar el desplazamiento.
+            Puedes personalizar los estilos según tus necesidades. 
+            ste es un ejemplo de una aplicación React Native con SafeAreaView y ScrollView.
+            Puedes agregar más contenido aquí para ver cómo funciona el desplazamiento.
+            Asegúrate de que el contenido sea lo suficientemente largo para activar el desplazamiento.
+            Puedes personalizar los estilos según tus necesidades.  
+            ste es un ejemplo de una aplicación React Native con SafeAreaView y ScrollView.
+            Puedes agregar más contenido aquí para ver cómo funciona el desplazamiento.
+            Asegúrate de que el contenido sea lo suficientemente largo para activar el desplazamiento.
+            Puedes personalizar los estilos según tus necesidades. 
+            ste es un ejemplo de una aplicación React Native con SafeAreaView y ScrollView.
+            Puedes agregar más contenido aquí para ver cómo funciona el desplazamiento.
+            Asegúrate de que el contenido sea lo suficientemente largo para activar el desplazamiento.
+            Puedes personalizar los estilos según tus necesidades. 
+            ste es un ejemplo de una aplicación React Native con SafeAreaView y ScrollView.
+            Puedes agregar más contenido aquí para ver cómo funciona el desplazamiento.
+            Asegúrate de que el contenido sea lo suficientemente largo para activar el desplazamiento.
+            Puedes personalizar los estilos según tus necesidades. 
+            ste es un ejemplo de una aplicación React Native con SafeAreaView y ScrollView.
+            Puedes agregar más contenido aquí para ver cómo funciona el desplazamiento.
+            Asegúrate de que el contenido sea lo suficientemente largo para activar el desplazamiento.
+            Puedes personalizar los estilos según tus necesidades. 
+          </Text>
+        </ScrollView>
       </ScrollView>
-    </SafeAreaView>
+      </SafeAreaView>
+
   </SafeAreaProvider>
-);
+  );
+}
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,                             
-    paddingTop: StatusBar.currentHeight 
+    flex: 1,                             // Ocupa todo el alto disponible de la pantalla
+    paddingTop: StatusBar.currentHeight // Evita que el contenido se solape con la barra de estado
   },
   scrollView: {
-    backgroundColor: 'green',            
+    backgroundColor: 'green',            // Fondo rosa para visualizar el área del ScrollView
   },
   text: {
-    fontSize: 42,                        
-    padding: 12,                        
+    fontSize: 42,                        // Texto grande
+    padding: 12,                         // Espaciado interno
   },
 });
 
-export default App;
+export default App;
