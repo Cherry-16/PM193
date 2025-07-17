@@ -1,12 +1,10 @@
-import { View, Text, Pressable, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
-export default function Detalle({ navigation }) {
+export default function Detalle() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Detalle del Usuario</Text>
-      <Pressable style={styles.button} onPress={() => navigation.goBack()}>
-        <Text style={styles.buttonText}>Volver a Perfil</Text>
-      </Pressable>
+      <Text style={styles.title}>Detalles Usuario</Text>
+      <Text style={styles.subtitle}>Usando Navegacion Stack</Text>
     </View>
   );
 }
@@ -14,23 +12,18 @@ export default function Detalle({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#eee',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 20,
   },
   title: {
-    fontSize: 22,
-    fontWeight: 'bold',
-    marginBottom: 20,
-  },
-  button: {
-    backgroundColor: '#007BFF',
-    padding: 12,
-    borderRadius: 8,
-  },
-  buttonText: {
-    color: '#fff',
+    fontSize: 20,
     fontWeight: '600',
+    marginBottom: 8,
+    color: 'black',
+  },
+  subtitle: {
+    fontSize: 16,
+    color: 'blue',
   },
 });
