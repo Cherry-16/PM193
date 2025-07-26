@@ -1,8 +1,8 @@
 nombres = [
     {"Apellido": "Martinez", "Nombre": "Vanessa"},
-    {"Apellido": "Torres", "Nombre": "Kevin"},
-    {"Apellido": "Sanchez", "Nombre": "Jafet"},
-    {"Apellido": "Cruz", "Nombre": "Maria"},
+    {"Apellido": "Quintero", "Nombre": "Paul"},
+    {"Apellido": "Rodriguez", "Nombre": "Luis"},
+    {"Apellido": "Corpus", "Nombre": "Diego"},
     {"Apellido": "Balderas", "Nombre": "Andrea"}
     
 ] 
